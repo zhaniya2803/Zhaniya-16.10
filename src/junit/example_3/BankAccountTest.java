@@ -29,8 +29,8 @@ public class BankAccountTest {
     @Test
     public void shouldReturnFirstNameThenSecondName (){
         BankAccount account = new BankAccount("a", "b");
-        account.getFullName();
-//        assertArrayEquals();
+        String[] expected = {"a", "b"};
+        assertArrayEquals(expected, account.getFullName());
     }
 }
 
