@@ -15,8 +15,8 @@ public class Test {
     public static void main(String[] args) throws IOException {
 
         HttpServer httpServer = HttpServer.create(new InetSocketAddress(PORT),0);
-//        httpServer.createContext("/day", new WeekHandler());
-//        httpServer.createContext("/count", new CounterHandler());
+        httpServer.createContext("/day", new WeekHandler());
+        httpServer.createContext("/count", new CounterHandler());
 
         httpServer.createContext("/user", Test::getUsersHandler);
 
